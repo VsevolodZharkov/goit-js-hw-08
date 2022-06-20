@@ -6,15 +6,14 @@
 
   player.on('timeupdate', event => {
   const { seconds } = event;
-		
+		console.log(seconds);
 	localStorage.setItem('videoplayer-current-time', seconds)
 });
 
 	const theme = localStorage.getItem("videoplayer-current-time");
 	console.log(theme);
 	player
-  .setCurrentTime(theme)
-  .then(function (seconds) {
-  })
+  .setCurrentTime(theme);
+
 
 
