@@ -11,7 +11,7 @@
 });
 
 	const theme = localStorage.getItem("videoplayer-current-time");
-	console.dir(theme);
+	console.log(theme);
 	player
   .setCurrentTime(theme)
   .then(function (seconds) {
