@@ -4,11 +4,13 @@
 
   const player = new Vimeo.Player(iframe);
 
-  player.on('timeupdate', event => {
+  player.on('timeupdate', _.throttle((event) => {
   const { seconds } = event;
 		console.log(seconds);
-	localStorage.setItem('videoplayer-current-time', seconds)
-});
+	localStorage.setItem('videoplayer-current-time', seconds);
+}, 1000));
+
+
 
 	const theme = localStorage.getItem("videoplayer-current-time");
 	console.log(theme);
