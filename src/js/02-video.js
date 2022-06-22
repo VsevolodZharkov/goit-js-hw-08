@@ -15,5 +15,6 @@ function onTime (event) {
 	localStorage.setItem('videoplayer-current-time', seconds);
 }
 const theme = localStorage.getItem('videoplayer-current-time');
-console.log(theme);
-player.setCurrentTime(theme);
+if (theme) {
+	player.setCurrentTime(theme);
+}

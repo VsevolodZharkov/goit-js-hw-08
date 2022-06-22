@@ -24,15 +24,15 @@ const newGalleryIm = galleryItems
 
 	galleryRef.insertAdjacentHTML("afterbegin", newGalleryIm);
 
-	galleryRef.addEventListener("click", openModal);
+	// galleryRef.addEventListener("click", openModal);
 
-	function openModal(event) {
-		event.preventDefault();
+	// function openModal(event) {
+	// 	event.preventDefault();
 		
-		// const dataSourse = event.target.dataset.source;
+	// 	// const dataSourse = event.target.dataset.source;
 		
-		if (event.target.tagName !== "IMG") {
-			return;
-		}
+	// 	if (event.target.tagName !== "IMG") {
+	// 		return;
+	// 	}
 		new SimpleLightbox('.gallery a ', {captionsData:	'alt' , captionClass:	'bottom', captionDelay:	'250' });
-	}
+	// }
